@@ -1,4 +1,4 @@
-# 这是一款针对RecyclerView的多状态管理开源框架
+# RecyclerViewStatus，一款针对RecyclerView的多状态布局管理开源框架
 
 
 开发中经常会遇到列表的空、加载、错误等状态的切换需求。而市面上针对RecyclerView的多状态管理大概有以下两种方案
