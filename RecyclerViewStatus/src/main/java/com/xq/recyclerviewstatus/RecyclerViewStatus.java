@@ -82,7 +82,7 @@ public class RecyclerViewStatus {
     }
 
     public boolean isShowContent(){
-        return recyclerView.getAdapter() == concatStateAdapter;
+        return recyclerView.getAdapter() == contentAdapter;
     }
 
     public RecyclerView.Adapter<?> getContentAdapter() {
