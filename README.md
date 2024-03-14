@@ -34,7 +34,7 @@ PS：正式使用前确保 recyclerView已调用 setAdapter 和 setLayoutManager
 
 构造您所需要的StateInflate即完成全部状态的初始化
 
-首个参数为状态id(自定义)，第二个参数为布局id，第三个等同于onBindViewHolder的回调（可不给）
+首个参数为状态id(自定义)，第二个参数为布局id，第三个等同于onBindViewHolder的回调（可忽略）
 
 `
 
