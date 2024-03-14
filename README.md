@@ -13,6 +13,8 @@
 
 **本框架就是为此而生，并且使用理念极其简单：**
 
+
+
 ## 以下为使用文档
 
 在你的Activity/Fragment中直接创建RecyclerViewStatus作为成员变量
@@ -22,7 +24,7 @@
         RecyclerViewStatus recyclerViewStatus = new RecyclerViewStatus();
 `
 
-PS：正式使用前确保 recyclerView已调用setAdapter 和 setLayoutManager
+PS：正式使用前确保 recyclerView已调用 setAdapter 和 setLayoutManager
 
 `
 
@@ -31,6 +33,8 @@ PS：正式使用前确保 recyclerView已调用setAdapter 和 setLayoutManager
 `
 
 构造您所需要的StateInflate即完成全部状态的初始化
+
+首个参数为状态id(自定义)，第二个参数为布局id，第三个等同于onBindViewHolder的回调（可不给）
 
 `
 
