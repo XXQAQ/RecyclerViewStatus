@@ -21,16 +21,16 @@ public class RecyclerViewStatus {
     public void attachToRecyclerView(RecyclerView recyclerView){
         this.recyclerView = recyclerView;
         //
-        contentAdapter = recyclerView.getAdapter();
         contentLayoutManager = recyclerView.getLayoutManager();
+        contentAdapter = recyclerView.getAdapter();
         //
+        if (stateLayoutManager == null){
+            stateLayoutManager = new LinearLayoutManager(recyclerView.getContext(),RecyclerView.VERTICAL,false);
+        }
         if (concatStateAdapter == null){
             concatStateAdapter = new ConcatAdapter();
         } else {
             clearAllAdapter(concatStateAdapter);
-        }
-        if (stateLayoutManager == null){
-            stateLayoutManager = new LinearLayoutManager(recyclerView.getContext(),RecyclerView.VERTICAL,false);
         }
     }
 
@@ -51,8 +51,8 @@ public class RecyclerViewStatus {
 
     public void showContent(){
         clearAllAdapter(concatStateAdapter);
-        recyclerView.setAdapter(contentAdapter);
         recyclerView.setLayoutManager(contentLayoutManager);
+        recyclerView.setAdapter(contentAdapter);
     }
 
     public void showState(String stateId){
@@ -65,8 +65,8 @@ public class RecyclerViewStatus {
             StateAdapter stateAdapter = stateAdapterMap.get(stateId);
             stateAdapter.setItem(tag);
             switchToAdapter(concatStateAdapter,stateAdapter);
-            recyclerView.setAdapter(concatStateAdapter);
             recyclerView.setLayoutManager(stateLayoutManager);
+            recyclerView.setAdapter(concatStateAdapter);
         }
     }
 
